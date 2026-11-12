@@ -5,36 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Margarita's Mexican Restaurant | Justin, Texas</title>
-<meta name="description" content="Family owned and operated Mexican restaurant located in Justin, Texas. Call in an order, see the menu, or find us at 311 FM-156.">
+<meta name="description" content="Family owned and operated Mexican restaurant located in Justin, Texas. Dine in, take out and catering at 311 S. FM 156. Call 940-648-8888.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preload" href="fonts/bowlby-one-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/caprasimo-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/archivo-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/tacos-plate.webp" as="image" type="image/webp">
 <style>
-@font-face{font-family:"Bowlby One";src:url("fonts/bowlby-one-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Caprasimo";src:url("fonts/caprasimo-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"Archivo";src:url("fonts/archivo-wght.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
 
 html{scroll-behavior:smooth}
-body{margin:0;background:#FFF6E3}
+body{margin:0;background:#FFF8EA}
 .mg-encase{
-  --wall:#1BA9CC; --wall-deep:#1293B4; --sun:#FFC81F; --cobalt:#1A3A9C; --red:#C8241B;
-  --ink:#0B1B45; --cream:#FFF6E3; --white:#fff;
-  --display:"Bowlby One","Arial Black",Impact,sans-serif;
+  --wall:#2FA5A6; --sun:#F7B81F; --cobalt:#1C4A9A; --red:#C8241B; --green:#49B85C;
+  --ink:#10182F; --cream:#FFF8EA; --white:#FFFDF7;
+  --display:"Caprasimo","Cooper Black",Georgia,serif;
   --text:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serape:repeating-linear-gradient(90deg,#C8241B 0 26px,#FFF8EA 26px 30px,#F28A1C 30px 44px,#F7B81F 44px 62px,#49B85C 62px 76px,#FFF8EA 76px 80px,#1C4A9A 80px 104px,#2FA5A6 104px 116px,#FFF8EA 116px 120px);
   font-family:var(--text);color:var(--ink);background:var(--cream);
   font-size:18px;line-height:1.5;overflow-x:clip;-webkit-font-smoothing:antialiased;
 }
 .mg-encase *,.mg-encase *::before,.mg-encase *::after{box-sizing:border-box}
 .mg-encase a{color:inherit}
+.mg-encase img{display:block;max-width:100%}
+.mg-encase [id]{scroll-margin-top:96px}
 .mg-encase :focus-visible{outline:4px solid var(--ink);outline-offset:4px;border-radius:4px}
-.mg-encase .mg-on-dark :focus-visible,.mg-encase .mg-visit :focus-visible,.mg-encase .mg-foot :focus-visible{outline-color:var(--sun)}
+.mg-encase .mg-menu :focus-visible,.mg-encase .mg-visit :focus-visible,.mg-encase .mg-foot :focus-visible,.mg-encase .mg-door:focus-visible{outline-color:var(--sun)}
 .mg-encase .mg-skip{position:absolute;left:16px;top:-80px;background:var(--sun);color:var(--ink);padding:10px 16px;font-weight:800;z-index:50;border:3px solid var(--ink)}
 .mg-encase .mg-skip:focus{top:12px}
-.mg-encase [id]{scroll-margin-top:96px}
 .mg-encase .mg-caps{font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:13px}
+.mg-encase .mg-eyebrow{margin:0;color:var(--cobalt)}
+.mg-encase .mg-h2{font-family:var(--display);font-weight:400;font-size:clamp(36px,5.2vw,78px);line-height:1.03;margin:10px 0 0;text-wrap:balance}
+.mg-encase .mg-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--sun);color:var(--ink);border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:14px 22px;font-weight:900;text-decoration:none;text-transform:uppercase;letter-spacing:.1em;font-size:15px;transition:transform .15s,box-shadow .15s}
+.mg-encase .mg-btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--ink)}
+.mg-encase .mg-btn-alt{background:var(--cream)}
+.mg-encase .mg-btns{display:flex;flex-wrap:wrap;gap:16px}
 
 /* ---------- top rail ---------- */
 .mg-encase .mg-rail{position:sticky;top:0;z-index:20;background:var(--cream);border-bottom:4px solid var(--ink);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px clamp(16px,4vw,48px)}
-.mg-encase .mg-rail-name{font-family:var(--display);font-size:20px;color:var(--red);text-decoration:none;line-height:1;white-space:nowrap}
+.mg-encase .mg-rail-name{font-family:var(--display);font-size:24px;color:var(--ink);text-decoration:none;line-height:1;white-space:nowrap}
 .mg-encase .mg-rail nav ul{display:flex;gap:clamp(14px,2.4vw,34px);list-style:none;margin:0;padding:0}
 .mg-encase .mg-rail nav a{text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:13px;padding:8px 0;border-bottom:3px solid transparent}
 .mg-encase .mg-rail nav a:hover,.mg-encase .mg-rail nav a:focus-visible{border-bottom-color:var(--red)}
@@ -42,192 +51,237 @@ body{margin:0;background:#FFF6E3}
 .mg-encase .mg-rail-call:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
 
 /* ---------- facade (hero) ---------- */
-.mg-encase .mg-facade{position:relative;background:var(--cream);padding-top:clamp(10px,2vw,24px)}
+.mg-encase .mg-facade{--gable:clamp(44px,9vw,130px);--sky:clamp(10px,2vw,24px);position:relative;background:var(--cream);padding-top:var(--sky)}
+.mg-encase .mg-lights{position:absolute;left:0;top:var(--sky);width:100%;height:var(--gable);overflow:visible;z-index:2;pointer-events:none}
+.mg-encase .mg-lights path{vector-effect:non-scaling-stroke;fill:none}
+.mg-encase .mg-lights .mg-bulbs path{stroke-width:11;stroke-linecap:round}
 .mg-encase .mg-wall{
   position:relative;
-  background:
-    repeating-linear-gradient(to bottom,transparent 0 38px,rgba(11,27,69,.13) 38px 40px),
-    var(--wall);
-  clip-path:polygon(0 clamp(44px,9vw,130px),50% 0,100% clamp(44px,9vw,130px),100% 100%,0 100%);
-  padding:clamp(70px,9.5vw,140px) clamp(16px,4vw,48px) 0;
-  display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;
+  background:repeating-linear-gradient(to bottom,transparent 0 38px,rgba(16,24,47,.10) 38px 40px),var(--wall);
+  clip-path:polygon(0 var(--gable),50% 0,100% var(--gable),100% 100%,0 100%);
+  padding:clamp(76px,10vw,150px) clamp(16px,4vw,48px) 0;
 }
-.mg-encase .mg-kicker{margin:0 0 18px;background:var(--ink);color:var(--sun);padding:6px 14px}
+.mg-encase .mg-wall-in{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,.78fr);gap:clamp(28px,4.5vw,68px);align-items:end}
+.mg-encase .mg-front{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center}
+.mg-encase .mg-kicker{margin:0 0 16px;background:var(--ink);color:var(--sun);padding:6px 14px}
 .mg-encase .mg-sign{
-  margin:0;position:relative;display:grid;justify-items:center;
-  background:var(--sun);border:6px solid var(--ink);border-radius:14px;
-  box-shadow:10px 10px 0 var(--ink);
-  padding:clamp(14px,2vw,26px) clamp(18px,4vw,64px) clamp(16px,2vw,28px);
+  margin:0;position:relative;display:grid;justify-items:center;max-width:100%;
+  background:var(--white);border:5px solid var(--ink);border-radius:8px;box-shadow:9px 9px 0 var(--ink);
+  padding:clamp(10px,1.4vw,20px) clamp(16px,3vw,44px) clamp(14px,1.6vw,22px);
   transform:rotate(-1.2deg);
 }
-.mg-encase .mg-sign::before,.mg-encase .mg-sign::after{content:"";position:absolute;top:10px;width:12px;height:12px;border-radius:50%;background:var(--ink)}
-.mg-encase .mg-sign::before{left:12px}.mg-encase .mg-sign::after{right:12px}
-.mg-encase .mg-sign-name{font-family:var(--display);font-weight:400;color:var(--red);font-size:clamp(54px,9.6vw,150px);line-height:.95;letter-spacing:-.01em;text-shadow:.035em .035em 0 var(--ink)}
-.mg-encase .mg-sign-sub{margin-top:.5em;background:var(--ink);color:var(--sun);font-family:var(--text);font-weight:900;text-transform:uppercase;letter-spacing:.2em;font-size:clamp(13px,1.9vw,28px);padding:.35em 1em;line-height:1.2}
-.mg-encase .mg-lead{margin:clamp(22px,2vw,28px) 0 0;max-width:36ch;font-weight:700;font-size:clamp(20px,2.1vw,30px);line-height:1.2;text-wrap:balance}
+.mg-encase .mg-sign-name{font-family:var(--display);font-weight:400;color:var(--sun);font-size:clamp(44px,7vw,104px);line-height:1.08;white-space:nowrap;-webkit-text-stroke:.03em var(--ink);paint-order:stroke fill;text-shadow:.055em .055em 0 var(--ink)}
+.mg-encase .mg-sign-sub{font-family:var(--display);color:var(--ink);font-size:clamp(17px,2.6vw,38px);line-height:1.1;white-space:nowrap}
+.mg-encase .mg-lead{margin:clamp(20px,2vw,28px) 0 0;max-width:34ch;font-weight:700;font-size:clamp(19px,1.9vw,27px);line-height:1.22;text-wrap:balance}
 
-.mg-encase .mg-doors{margin-top:clamp(22px,2vw,28px);display:grid;grid-template-columns:repeat(2,minmax(0,280px));gap:0;align-items:end;justify-content:center;width:100%}
+.mg-encase .mg-doors{margin-top:clamp(20px,2vw,28px);display:grid;grid-template-columns:repeat(2,minmax(0,270px));justify-content:center;align-items:end;width:100%}
 .mg-encase .mg-door{
   position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;text-align:left;
-  min-height:clamp(150px,13vw,190px);padding:16px 16px 20px;
+  min-height:clamp(150px,13vw,190px);padding:16px 16px 18px;
   background:var(--cobalt);color:var(--white);text-decoration:none;
-  border:5px solid var(--ink);border-bottom:0;
+  border:5px solid var(--white);border-bottom:0;
   transform-origin:left center;transition:transform .35s cubic-bezier(.2,.8,.2,1);
 }
-.mg-encase .mg-door + .mg-door{border-left:0;transform-origin:right center}
-.mg-encase .mg-door::before{content:"";position:absolute;left:14px;right:14px;top:14px;height:38%;background:linear-gradient(135deg,rgba(255,255,255,.34),rgba(255,255,255,.1) 55%,rgba(255,255,255,.22));border:3px solid var(--ink)}
-.mg-encase .mg-door::after{content:"";position:absolute;right:12px;top:58%;width:12px;height:12px;border-radius:50%;background:var(--sun);border:2px solid var(--ink)}
-.mg-encase .mg-door + .mg-door::after{right:auto;left:12px}
-.mg-encase .mg-door + .mg-door{padding-left:34px}
+.mg-encase .mg-door + .mg-door{border-left-width:3px;transform-origin:right center;padding-left:32px}
+.mg-encase .mg-door::before{content:"";position:absolute;left:14px;right:14px;top:14px;height:40%;
+  background:linear-gradient(var(--cobalt) 4px,transparent 4px) 0 0/100% 50%,linear-gradient(90deg,var(--cobalt) 4px,transparent 4px) 0 0/33.34% 100%,linear-gradient(135deg,rgba(255,255,255,.42),rgba(255,255,255,.14) 55%,rgba(255,255,255,.3));
+  border:4px solid var(--cobalt);box-shadow:0 0 0 2px rgba(16,24,47,.55)}
+.mg-encase .mg-door::after{content:"";position:absolute;right:10px;top:60%;width:12px;height:12px;border-radius:50%;background:var(--sun);border:2px solid var(--ink)}
+.mg-encase .mg-door + .mg-door::after{right:auto;left:10px}
 .mg-encase .mg-door-label{font-weight:800;text-transform:uppercase;letter-spacing:.13em;font-size:12px;color:var(--sun)}
 .mg-encase .mg-door-big{font-weight:900;font-size:clamp(19px,1.8vw,25px);line-height:1.1;white-space:nowrap}
 .mg-encase .mg-door:hover,.mg-encase .mg-door:focus-visible{transform:perspective(700px) rotateY(-14deg)}
 .mg-encase .mg-door + .mg-door:hover,.mg-encase .mg-door + .mg-door:focus-visible{transform:perspective(700px) rotateY(14deg)}
 
-.mg-encase .mg-star{position:absolute;left:clamp(24px,6vw,104px);bottom:28px;display:grid;justify-items:center;gap:6px;text-decoration:none}
-.mg-encase .mg-star-shape{width:clamp(130px,12vw,176px);aspect-ratio:1;background:var(--sun);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);display:grid;place-items:center;filter:drop-shadow(0 0 0 var(--ink))}
-.mg-encase .mg-star-num{font-family:var(--display);font-size:clamp(22px,2.2vw,32px);line-height:1;margin-top:6%}
-.mg-encase .mg-star-cap{font-weight:800;font-size:15px;line-height:1.25;text-align:center;max-width:16ch}
-.mg-encase .mg-star-wrap{filter:drop-shadow(5px 5px 0 var(--ink))}
-.mg-encase .mg-open{position:absolute;right:clamp(24px,6vw,104px);bottom:clamp(60px,7vw,104px);background:var(--cream);border:4px solid var(--ink);padding:14px 18px;text-align:left;transform:rotate(3deg);box-shadow:6px 6px 0 var(--ink);max-width:230px}
-.mg-encase .mg-open b{display:block;font-family:var(--display);font-weight:400;color:var(--red);font-size:30px;line-height:1}
-.mg-encase .mg-open span{display:block;font-weight:800;margin-top:6px;font-size:17px}
+.mg-encase .mg-window{position:relative;margin:0 0 clamp(30px,4vw,56px);align-self:end}
+.mg-encase .mg-window img{width:100%;height:clamp(360px,36vw,520px);object-fit:cover;object-position:50% 62%;border:10px solid var(--white);outline:4px solid var(--ink);box-shadow:10px 10px 0 var(--ink)}
+.mg-encase .mg-star{position:absolute;left:-36px;top:-46px;display:grid;justify-items:center;text-decoration:none;transform:rotate(-8deg);z-index:1}
+.mg-encase .mg-star-wrap{filter:drop-shadow(4px 4px 0 var(--ink))}
+.mg-encase .mg-star-shape{width:clamp(120px,11.5vw,158px);aspect-ratio:1;background:var(--sun);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);display:grid;place-items:center}
+.mg-encase .mg-star-num{font-family:var(--display);font-size:clamp(24px,2.4vw,34px);line-height:1;margin-top:8%}
+.mg-encase .mg-star-cap{background:var(--ink);color:var(--cream);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.08em;padding:5px 10px;margin-top:-20px;white-space:nowrap}
+.mg-encase .mg-open{position:absolute;right:-20px;bottom:-26px;margin:0;background:var(--white);border:4px solid var(--ink);padding:12px 16px;text-align:left;transform:rotate(3deg);box-shadow:6px 6px 0 var(--ink)}
+.mg-encase .mg-open b{display:block;font-family:var(--display);font-weight:400;color:var(--red);font-size:28px;line-height:1}
+.mg-encase .mg-open span{display:block;font-weight:800;margin-top:5px;font-size:16px;white-space:nowrap}
 
-/* curb */
 .mg-encase .mg-curb{background:var(--ink);color:var(--cream);border-top:8px solid var(--sun)}
 .mg-encase .mg-curb ul{list-style:none;margin:0;padding:18px clamp(16px,4vw,48px);display:flex;flex-wrap:wrap;justify-content:center;gap:10px clamp(20px,4vw,56px)}
 .mg-encase .mg-curb li{font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:14px}
 .mg-encase .mg-curb strong{color:var(--sun);font-weight:900}
 
-/* ---------- boards (menu) ---------- */
-.mg-encase .mg-boards{padding:clamp(64px,9vw,140px) clamp(16px,4vw,48px);max-width:1320px;margin:0 auto}
-.mg-encase .mg-h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,5.4vw,84px);line-height:1.02;margin:10px 0 0;max-width:15ch;text-wrap:balance}
-.mg-encase .mg-h2 em{font-style:normal;color:var(--red)}
-.mg-encase .mg-eyebrow{color:var(--cobalt)}
-.mg-encase .mg-board-grid{margin-top:clamp(36px,5vw,72px);display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:auto auto;gap:clamp(18px,2.2vw,32px)}
-.mg-encase .mg-board{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:220px;padding:clamp(20px,2.4vw,34px);border:5px solid var(--ink);box-shadow:8px 8px 0 var(--ink);text-decoration:none;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
-.mg-encase .mg-board:hover,.mg-encase .mg-board:focus-visible{transform:translate(4px,4px) rotate(0deg);box-shadow:4px 4px 0 var(--ink)}
-.mg-encase .mg-board-n{font-weight:900;letter-spacing:.14em;font-size:13px;text-transform:uppercase}
-.mg-encase .mg-board h3{font-family:var(--display);font-weight:400;margin:0;font-size:clamp(28px,3.3vw,52px);line-height:1}
-.mg-encase .mg-board p{margin:10px 0 0;font-weight:600;max-width:30ch}
-.mg-encase .mg-go{display:inline-flex;align-items:center;gap:10px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:14px}
-.mg-encase .mg-go svg{width:34px;height:16px;transition:transform .25s}
-.mg-encase .mg-board:hover .mg-go svg{transform:translateX(6px)}
-.mg-encase .mg-b1{grid-row:1 / span 2;background:var(--sun);transform:rotate(-1deg);min-height:460px}
-.mg-encase .mg-b1 h3{font-size:clamp(40px,5.2vw,84px);color:var(--red);text-shadow:.04em .04em 0 var(--ink)}
-.mg-encase .mg-b2{background:var(--cobalt);color:var(--white);transform:rotate(.8deg)}
-.mg-encase .mg-b2 .mg-board-n,.mg-encase .mg-b2 .mg-go{color:var(--sun)}
-.mg-encase .mg-b3{background:var(--wall);transform:rotate(-.6deg)}
-.mg-encase .mg-b4{grid-column:2 / span 2;background:var(--cream);transform:rotate(.4deg);min-height:180px}
-.mg-encase .mg-b4 h3{color:var(--cobalt)}
+/* ---------- the menu (their black menu, their serape) ---------- */
+.mg-encase .mg-menu{position:relative;background:var(--ink);color:var(--cream);padding:clamp(72px,9vw,136px) clamp(16px,4vw,48px) clamp(64px,8vw,120px)}
+.mg-encase .mg-menu::before,.mg-encase .mg-menu::after{content:"";position:absolute;left:0;right:0;height:16px;background:var(--serape)}
+.mg-encase .mg-menu::before{top:0}.mg-encase .mg-menu::after{bottom:0}
+.mg-encase .mg-menu-in{max-width:1280px;margin:0 auto}
+.mg-encase .mg-menu-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 40px}
+.mg-encase .mg-menu .mg-eyebrow{color:var(--cream)}
+.mg-encase .mg-menu .mg-h2{color:var(--sun)}
+.mg-encase .mg-legend{margin:0;font-weight:700;font-size:16px;max-width:36ch}
+.mg-encase .mg-fav{color:var(--green);font-weight:900;white-space:nowrap}
+.mg-encase .mg-dishes{margin-top:clamp(32px,4.5vw,60px);display:grid;grid-template-columns:1.1fr 1fr 1fr;grid-template-areas:"a b b" "a c d";gap:clamp(18px,2.2vw,30px)}
+.mg-encase .mg-dish{margin:0;display:flex;flex-direction:column;min-width:0}
+.mg-encase .mg-dish-a{grid-area:a}.mg-encase .mg-dish-b{grid-area:b}.mg-encase .mg-dish-c{grid-area:c}.mg-encase .mg-dish-d{grid-area:d}
+.mg-encase .mg-ph{position:relative;height:300px;border:5px solid var(--cream);overflow:hidden;background:#1d2742}
+.mg-encase .mg-dish-a .mg-ph{flex:1;min-height:440px}
+.mg-encase .mg-dish-c .mg-ph,.mg-encase .mg-dish-d .mg-ph{height:340px}
+.mg-encase .mg-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.mg-encase .mg-dish:hover .mg-ph img{transform:scale(1.04)}
+.mg-encase .mg-dish-c .mg-ph img{object-position:50% 16%}
+.mg-encase .mg-dish-d .mg-ph img{object-position:50% 40%}
+.mg-encase .mg-dish-a .mg-ph img{object-position:50% 70%}
+.mg-encase .mg-dish figcaption{padding-top:14px}
+.mg-encase .mg-dish h3,.mg-encase .mg-more h3{font-family:var(--display);font-weight:400;color:var(--sun);font-size:clamp(23px,2.1vw,30px);line-height:1.1;margin:0}
+.mg-encase .mg-dish p,.mg-encase .mg-more p{margin:6px 0 0;font-size:16px;line-height:1.45;max-width:46ch}
+.mg-encase .mg-dish .mg-fav,.mg-encase .mg-more .mg-fav{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-top:6px}
+.mg-encase .mg-more{list-style:none;margin:clamp(34px,4vw,56px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.2vw,30px)}
+.mg-encase .mg-more li{border-top:3px dotted rgba(255,248,234,.45);padding-top:16px}
+.mg-encase .mg-menu .mg-btns{margin-top:clamp(34px,4vw,52px);align-items:center}
+.mg-encase .mg-menu .mg-btn{border-color:var(--cream);box-shadow:6px 6px 0 var(--cobalt)}
+.mg-encase .mg-menu .mg-btn:hover{box-shadow:3px 3px 0 var(--cobalt)}
+.mg-encase .mg-lunch{margin:0;font-weight:700;font-size:16px}
 
-/* ---------- word on the wall (review) ---------- */
-.mg-encase .mg-word{background:repeating-linear-gradient(to bottom,transparent 0 38px,rgba(11,27,69,.13) 38px 40px),var(--wall);border-block:6px solid var(--ink);padding:clamp(64px,9vw,130px) clamp(16px,4vw,48px)}
-.mg-encase .mg-word-in{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,80px);align-items:center}
-.mg-encase .mg-word blockquote{margin:0}
-.mg-encase .mg-word blockquote p{font-family:var(--display);font-size:clamp(40px,7.4vw,118px);line-height:.98;margin:0;color:var(--ink)}
-.mg-encase .mg-word blockquote p span{display:block;color:var(--cream);text-shadow:.04em .04em 0 var(--ink)}
+/* ---------- inside (their yellow walls, their blue frames) ---------- */
+.mg-encase .mg-inside{background:var(--sun);padding:clamp(64px,9vw,130px) clamp(16px,4vw,48px)}
+.mg-encase .mg-inside-in{max-width:1280px;margin:0 auto}
+.mg-encase .mg-inside-lead{margin:16px 0 0;font-weight:700;font-size:clamp(19px,1.8vw,24px);max-width:34ch}
+.mg-encase .mg-frames{margin-top:clamp(30px,4.5vw,60px);display:grid;grid-template-columns:1.45fr 1fr;grid-template-rows:auto auto;gap:clamp(16px,2vw,26px)}
+.mg-encase .mg-frame{margin:0;position:relative;border:12px solid var(--cobalt);outline:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink);overflow:hidden;background:var(--cobalt);min-height:200px;transform:rotate(var(--r,0deg))}
+.mg-encase .mg-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mg-encase .mg-frame-1{grid-row:1 / span 2;min-height:clamp(380px,38vw,520px);--r:-.6deg}
+.mg-encase .mg-frame-2{--r:.8deg}
+.mg-encase .mg-frame-3{--r:-.5deg}
+.mg-encase .mg-board-grid{margin-top:clamp(34px,4.5vw,64px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,1.8vw,24px)}
+.mg-encase .mg-board{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:22px;min-height:210px;padding:clamp(16px,1.8vw,24px);border:5px solid var(--ink);box-shadow:7px 7px 0 var(--ink);text-decoration:none;transform:rotate(var(--r,0deg));transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.mg-encase .mg-board:hover,.mg-encase .mg-board:focus-visible{transform:translate(4px,4px);box-shadow:3px 3px 0 var(--ink)}
+.mg-encase .mg-board-n{font-weight:900;letter-spacing:.14em;font-size:12px;text-transform:uppercase}
+.mg-encase .mg-board h3{font-family:var(--display);font-weight:400;margin:0;font-size:clamp(24px,2.3vw,34px);line-height:1.05}
+.mg-encase .mg-go{display:inline-flex;align-items:center;gap:10px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:13px}
+.mg-encase .mg-go svg{flex:none;width:30px;height:16px;transition:transform .25s}
+.mg-encase .mg-board:hover .mg-go svg{transform:translateX(6px)}
+.mg-encase .mg-b1{background:var(--cream);--r:-1deg}
+.mg-encase .mg-b1 h3{color:var(--red)}
+.mg-encase .mg-b2{background:var(--cobalt);color:var(--white);--r:.8deg}
+.mg-encase .mg-b2 .mg-board-n,.mg-encase .mg-b2 .mg-go{color:var(--sun)}
+.mg-encase .mg-b3{background:var(--wall);--r:-.6deg}
+.mg-encase .mg-b4{background:var(--ink);color:var(--cream);--r:.5deg}
+.mg-encase .mg-b4 h3,.mg-encase .mg-b4 .mg-go{color:var(--sun)}
+
+/* ---------- word on the wall (reviews) ---------- */
+.mg-encase .mg-word{background:repeating-linear-gradient(to bottom,transparent 0 38px,rgba(16,24,47,.10) 38px 40px),var(--wall);border-block:6px solid var(--ink);padding:clamp(64px,9vw,130px) clamp(16px,4vw,48px)}
+.mg-encase .mg-word-in{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,6vw,96px);align-items:center}
+.mg-encase .mg-tallies{display:grid;gap:26px;justify-items:start}
+.mg-encase .mg-tally{margin:0;background:var(--sun);border:5px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:18px 24px;transform:rotate(var(--r,0deg));--r:-3deg;text-align:center}
+.mg-encase .mg-tally + .mg-tally{--r:2deg;background:var(--white);margin-left:28px}
+.mg-encase .mg-tally b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(50px,5.4vw,82px);line-height:.95;color:var(--ink)}
+.mg-encase .mg-tally span{display:block;font-weight:900;text-transform:uppercase;letter-spacing:.11em;font-size:13px;margin-top:8px;max-width:17ch}
+.mg-encase .mg-word .mg-eyebrow{color:var(--ink)}
+.mg-encase .mg-word blockquote{margin:12px 0 0}
+.mg-encase .mg-word blockquote p{font-family:var(--display);font-size:clamp(42px,7vw,108px);line-height:1.02;margin:0;color:var(--ink)}
+.mg-encase .mg-word blockquote p span{display:block;color:var(--white);text-shadow:.045em .045em 0 var(--ink)}
 .mg-encase .mg-word footer{margin-top:22px;font-weight:800;font-size:17px}
 .mg-encase .mg-word footer a{text-underline-offset:4px}
-.mg-encase .mg-tally{background:var(--sun);border:5px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:22px 26px;transform:rotate(-3deg);text-align:center}
-.mg-encase .mg-tally b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(52px,6vw,92px);line-height:.9;color:var(--red);text-shadow:.04em .04em 0 var(--ink)}
-.mg-encase .mg-tally span{display:block;font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:13px;margin-top:10px;max-width:14ch}
 
 /* ---------- visit ---------- */
-.mg-encase .mg-visit{background:var(--cobalt);color:var(--white);padding:clamp(64px,9vw,140px) clamp(16px,4vw,48px)}
-.mg-encase .mg-visit-in{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(32px,6vw,96px);align-items:center}
+.mg-encase .mg-visit{background:var(--cobalt);color:var(--white);padding:clamp(64px,9vw,136px) clamp(16px,4vw,48px)}
+.mg-encase .mg-visit-in{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,7vw,110px);align-items:center}
 .mg-encase .mg-visit .mg-eyebrow{color:var(--sun)}
-.mg-encase .mg-visit .mg-h2{max-width:none;color:var(--white)}
+.mg-encase .mg-visit .mg-h2{color:var(--white)}
 .mg-encase .mg-addr{font-style:normal;font-weight:800;font-size:clamp(24px,3vw,44px);line-height:1.12;margin:26px 0 0}
-.mg-encase .mg-btns{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
-.mg-encase .mg-btn{display:inline-flex;align-items:center;gap:10px;background:var(--sun);color:var(--ink);border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:14px 22px;font-weight:900;text-decoration:none;text-transform:uppercase;letter-spacing:.1em;font-size:15px;transition:transform .15s,box-shadow .15s}
-.mg-encase .mg-btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--ink)}
-.mg-encase .mg-btn-alt{background:var(--cream)}
-.mg-encase .mg-hang{position:relative;justify-self:center;padding-top:70px;transform-origin:50% 0}
-.mg-encase .mg-hang::before,.mg-encase .mg-hang::after{content:"";position:absolute;top:0;width:3px;height:78px;background:var(--cream);transform-origin:top}
-.mg-encase .mg-hang::before{left:50%;transform:rotate(32deg)}
-.mg-encase .mg-hang::after{left:50%;transform:rotate(-32deg)}
-.mg-encase .mg-nail{position:absolute;left:50%;top:-8px;width:16px;height:16px;margin-left:-7px;border-radius:50%;background:var(--sun);border:3px solid var(--ink);z-index:1}
-.mg-encase .mg-hours{position:relative;background:var(--cream);color:var(--ink);border:6px solid var(--ink);box-shadow:10px 10px 0 var(--ink);padding:26px 30px 28px;text-align:center;min-width:min(320px,78vw)}
-.mg-encase .mg-hours h3{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(46px,5vw,76px);line-height:.9;color:var(--red)}
-.mg-encase .mg-hours p{margin:14px 0 0;font-weight:900;font-size:clamp(22px,2.2vw,30px);line-height:1.15}
-.mg-encase .mg-hours small{display:block;margin-top:12px;font-weight:700;font-size:15px}
-.mg-encase .mg-hours small a{font-weight:900}
+.mg-encase .mg-ways{margin:18px 0 0;font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:14px;color:var(--sun)}
+.mg-encase .mg-visit .mg-btns{margin-top:30px}
+.mg-encase .mg-store{position:relative;margin:0;justify-self:center;max-width:440px;width:100%}
+.mg-encase .mg-store img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border:10px solid var(--white);outline:4px solid var(--ink);box-shadow:12px 12px 0 var(--ink);transform:rotate(1.4deg)}
+.mg-encase .mg-hours{position:absolute;left:-64px;bottom:-34px;background:var(--white);color:var(--ink);border:5px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:18px 22px 20px;text-align:center;transform:rotate(-4deg);transform-origin:50% 0}
+.mg-encase .mg-hours h3{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(40px,4vw,58px);line-height:.95;color:var(--red)}
+.mg-encase .mg-hours p{margin:8px 0 0;font-weight:900;font-size:clamp(19px,1.8vw,24px);line-height:1.15;white-space:nowrap}
+.mg-encase .mg-hours small{display:block;margin-top:8px;font-weight:700;font-size:14px}
 
 /* ---------- foot ---------- */
-.mg-encase .mg-foot{background:var(--ink);color:var(--cream);padding:44px clamp(16px,4vw,48px) 36px}
-.mg-encase .mg-foot-in{max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:flex-end}
-.mg-encase .mg-foot-name{font-family:var(--display);font-size:clamp(30px,4vw,56px);color:var(--sun);line-height:1;margin:0}
+.mg-encase .mg-foot{background:var(--ink);color:var(--cream);padding:44px clamp(16px,4vw,48px) 36px;position:relative}
+.mg-encase .mg-foot::before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:var(--serape)}
+.mg-encase .mg-foot-in{max-width:1280px;margin:12px auto 0;display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:flex-end}
+.mg-encase .mg-foot-name{font-family:var(--display);font-size:clamp(32px,4vw,56px);color:var(--sun);line-height:1;margin:0}
 .mg-encase .mg-foot ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px 26px;margin:0;padding:0}
 .mg-encase .mg-foot ul a{font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:13px;text-underline-offset:5px}
-.mg-encase .mg-note{max-width:1320px;margin:28px auto 0;padding-top:18px;border-top:2px solid rgba(255,246,227,.25);font-size:14px;font-weight:600;color:var(--cream)}
+.mg-encase .mg-note{max-width:1280px;margin:28px auto 0;padding-top:18px;border-top:2px solid rgba(255,248,234,.25);font-size:14px;font-weight:600}
 
 /* ---------- motion (transform only, from a visible state) ---------- */
 @media (prefers-reduced-motion:no-preference){
   .mg-encase .mg-sign{animation:mg-settle 1.1s cubic-bezier(.3,1.4,.4,1) both}
   @keyframes mg-settle{0%{transform:rotate(-7deg) translateY(-18px)}55%{transform:rotate(1.5deg)}100%{transform:rotate(-1.2deg)}}
-  .mg-encase .mg-hang{animation:mg-swing 3.2s ease-in-out 3 both}
-  @keyframes mg-swing{0%,100%{transform:rotate(0)}25%{transform:rotate(3deg)}75%{transform:rotate(-3deg)}}
-  .mg-js .mg-encase [data-rise]{transform:translateY(34px);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
-  .mg-js .mg-encase [data-rise].mg-in{transform:none}
-  .mg-js .mg-encase .mg-b1[data-rise].mg-in{transform:rotate(-1deg)}
-  .mg-js .mg-encase .mg-b2[data-rise].mg-in{transform:rotate(.8deg)}
-  .mg-js .mg-encase .mg-b3[data-rise].mg-in{transform:rotate(-.6deg)}
-  .mg-js .mg-encase .mg-b4[data-rise].mg-in{transform:rotate(.4deg)}
-  .mg-js .mg-encase .mg-tally[data-rise].mg-in{transform:rotate(-3deg)}
+  .mg-encase .mg-bulbs path{animation:mg-twinkle 2.6s ease-in-out infinite}
+  .mg-encase .mg-bulbs path:nth-child(3n){animation-delay:-.9s}
+  .mg-encase .mg-bulbs path:nth-child(3n+1){animation-delay:-1.8s}
+  @keyframes mg-twinkle{0%,100%{opacity:1}50%{opacity:.5}}
+  .mg-js .mg-encase [data-rise]{transform:translateY(34px) rotate(var(--r,0deg));transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+  .mg-js .mg-encase [data-rise].mg-in{transform:rotate(var(--r,0deg))}
+  .mg-js .mg-encase .mg-board[data-rise].mg-in:hover{transform:translate(4px,4px)}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.mg-encase *{transition:none!important;animation:none!important}}
 
 /* ---------- mobile: its own layout ---------- */
-@media (max-width:820px){
+@media (max-width:899px){
   .mg-encase{font-size:17px}
   .mg-encase .mg-rail{flex-wrap:wrap;row-gap:4px;padding-bottom:6px}
   .mg-encase .mg-rail nav{order:3;width:100%}
   .mg-encase .mg-rail nav ul{justify-content:space-between;gap:8px}
   .mg-encase .mg-rail nav a{font-size:12px;letter-spacing:.08em;padding:6px 0}
-  .mg-encase .mg-rail-name{font-size:17px}
+  .mg-encase .mg-rail-name{font-size:21px}
   .mg-encase .mg-rail-call{font-size:14px;padding:7px 10px}
-  .mg-encase .mg-wall{padding-top:76px}
-  .mg-encase .mg-sign{border-width:5px;box-shadow:7px 7px 0 var(--ink);width:100%;min-width:0;padding-inline:10px}
-  .mg-encase .mg-sign-name{font-size:clamp(34px,11.6vw,92px)}
-  .mg-encase .mg-lead{max-width:22ch}
-  .mg-encase .mg-lead{font-size:20px}
-  .mg-encase .mg-star,.mg-encase .mg-open{position:static;transform:none}
-  .mg-encase .mg-facts{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;margin-top:20px;width:100%}
-  .mg-encase .mg-star{grid-auto-flow:column;justify-items:start;align-items:center;gap:10px}
-  .mg-encase .mg-star-shape{width:84px}
-  .mg-encase .mg-star-num{font-size:16px}
-  .mg-encase .mg-star-cap{font-size:14px;text-align:left;max-width:13ch}
-  .mg-encase .mg-open{max-width:none;padding:10px 12px;box-shadow:4px 4px 0 var(--ink)}
-  .mg-encase .mg-open b{font-size:22px}
-  .mg-encase .mg-open span{font-size:15px;margin-top:3px;max-width:9ch}
-  .mg-encase .mg-doors{grid-template-columns:1fr 1fr;margin-top:22px}
-  .mg-encase .mg-door{min-height:150px;padding:12px 10px 16px}
-  .mg-encase .mg-door + .mg-door{padding-left:26px}
-  .mg-encase .mg-door-big{font-size:18px}
+  .mg-encase .mg-lights .mg-bulbs path{stroke-width:8}
+  .mg-encase .mg-wall{padding-top:68px}
+  .mg-encase .mg-wall-in{grid-template-columns:minmax(0,1fr);gap:0;justify-items:center;text-align:center}
+  .mg-encase .mg-front{display:contents}
+  .mg-encase .mg-kicker{order:1;margin-bottom:12px}
+  .mg-encase .mg-sign{order:2;border-width:4px;box-shadow:6px 6px 0 var(--ink);padding:8px 14px 12px}
+  .mg-encase .mg-sign-name{font-size:clamp(38px,12.6vw,84px)}
+  .mg-encase .mg-sign-sub{font-size:clamp(16px,4.9vw,32px)}
+  .mg-encase .mg-lead{order:3;margin-top:16px;font-size:18px;max-width:30ch}
+  .mg-encase .mg-window{order:4;width:100%;margin:22px 0 0}
+  .mg-encase .mg-window img{height:clamp(190px,50vw,340px);border-width:6px;box-shadow:6px 6px 0 var(--ink);object-position:50% 58%}
+  .mg-encase .mg-star{left:-8px;top:-20px}
+  .mg-encase .mg-star-shape{width:92px}
+  .mg-encase .mg-star-num{font-size:20px}
+  .mg-encase .mg-star-cap{font-size:10.5px;padding:4px 7px;margin-top:-12px}
+  .mg-encase .mg-open{right:-6px;bottom:-20px;padding:8px 12px;box-shadow:4px 4px 0 var(--ink)}
+  .mg-encase .mg-open b{font-size:20px}
+  .mg-encase .mg-open span{font-size:14px;margin-top:2px}
+  .mg-encase .mg-doors{order:5;grid-template-columns:1fr 1fr;margin-top:32px}
+  .mg-encase .mg-door{min-height:128px;padding:10px 10px 14px;border-width:4px}
+  .mg-encase .mg-door + .mg-door{padding-left:24px}
+  .mg-encase .mg-door::before{left:10px;right:10px;top:10px;height:36%}
+  .mg-encase .mg-door-big{font-size:17px}
   .mg-encase .mg-door-label{font-size:11px;letter-spacing:.1em}
   .mg-encase .mg-curb ul{justify-content:flex-start;gap:8px 22px}
   .mg-encase .mg-curb li{font-size:12px}
-  .mg-encase .mg-board-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
-  .mg-encase .mg-b2 h3,.mg-encase .mg-b3 h3{font-size:24px}
-  .mg-encase .mg-b4 h3{font-size:27px}
-  .mg-encase .mg-b2 .mg-go,.mg-encase .mg-b3 .mg-go{font-size:12px;letter-spacing:.08em}
-  .mg-encase .mg-b2 .mg-go svg,.mg-encase .mg-b3 .mg-go svg{flex:none;width:26px}
-  .mg-encase .mg-b1 h3{font-size:46px}
-  .mg-encase .mg-b1{grid-column:1 / -1;grid-row:auto;min-height:300px}
-  .mg-encase .mg-b2,.mg-encase .mg-b3{min-height:230px;padding:16px}
-  .mg-encase .mg-b2 p,.mg-encase .mg-b3 p{font-size:15px}
-  .mg-encase .mg-b4{grid-column:1 / -1}
-  .mg-encase .mg-board{box-shadow:6px 6px 0 var(--ink)}
-  .mg-encase .mg-word-in{grid-template-columns:1fr}
-  .mg-encase .mg-tally{justify-self:start;display:grid;grid-template-columns:auto auto;gap:14px;align-items:center;padding:14px 18px}
-  .mg-encase .mg-tally span{margin-top:0;text-align:left}
-  .mg-encase .mg-visit-in{grid-template-columns:1fr}
-  .mg-encase .mg-hang{grid-row:1;justify-self:start;margin-left:8px}
-  .mg-encase .mg-btn{width:100%;justify-content:center}
-}
-@media (min-width:821px){
-  .mg-encase .mg-facts{display:contents}
+  .mg-encase .mg-dishes{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"a a" "b b" "c d";gap:22px 14px}
+  .mg-encase .mg-dish-a .mg-ph{flex:none;min-height:0;height:320px}
+  .mg-encase .mg-ph{height:220px}
+  .mg-encase .mg-dish-c .mg-ph,.mg-encase .mg-dish-d .mg-ph{height:230px}
+  .mg-encase .mg-dish-c h3,.mg-encase .mg-dish-d h3{font-size:21px}
+  .mg-encase .mg-dish-c .mg-fav,.mg-encase .mg-dish-d .mg-fav{white-space:normal;letter-spacing:.08em}
+  .mg-encase .mg-dish-c p,.mg-encase .mg-dish-d p{font-size:15px}
+  .mg-encase .mg-more{grid-template-columns:minmax(0,1fr)}
+  .mg-encase .mg-btn{width:100%}
+  .mg-encase .mg-frames{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+  .mg-encase .mg-frame{border-width:8px;box-shadow:5px 5px 0 var(--ink);min-height:150px}
+  .mg-encase .mg-frame-1{grid-column:1 / -1;grid-row:auto;min-height:230px}
+  .mg-encase .mg-board-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .mg-encase .mg-board{min-height:180px;box-shadow:5px 5px 0 var(--ink);padding:14px}
+  .mg-encase .mg-board h3{font-size:23px}
+  .mg-encase .mg-go{font-size:11.5px;letter-spacing:.06em;gap:6px}
+  .mg-encase .mg-go svg{width:22px}
+  .mg-encase .mg-word-in{grid-template-columns:minmax(0,1fr)}
+  .mg-encase .mg-tallies{grid-template-columns:auto auto;justify-content:start;gap:14px}
+  .mg-encase .mg-tally{padding:12px 14px;box-shadow:5px 5px 0 var(--ink)}
+  .mg-encase .mg-tally + .mg-tally{margin-left:0}
+  .mg-encase .mg-tally b{font-size:44px}
+  .mg-encase .mg-tally span{font-size:11px;max-width:13ch}
+  .mg-encase .mg-visit-in{grid-template-columns:minmax(0,1fr)}
+  .mg-encase .mg-store{max-width:none;margin-bottom:34px}
+  .mg-encase .mg-store img{aspect-ratio:4/3.6;object-position:50% 38%;border-width:6px;box-shadow:7px 7px 0 var(--ink)}
+  .mg-encase .mg-hours{left:10px;bottom:-34px;padding:12px 16px 14px;box-shadow:5px 5px 0 var(--ink)}
 }
 </style>
 </head>
@@ -246,95 +300,173 @@ body{margin:0;background:#FFF6E3}
         <li><a href="#visit">Visit</a></li>
       </ul>
     </nav>
-    <a class="mg-rail-call" href="tel:+19406488888">(940) 648-8888</a>
+    <a class="mg-rail-call" href="tel:+19406488888">940-648-8888</a>
   </header>
 
   <main id="mg-main">
     <section class="mg-facade" id="top">
+      <svg class="mg-lights" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 100L50 0L100 100" stroke="#10182F" stroke-width="7"/>
+        <path d="M0 114L50 14L100 114" stroke="#10182F" stroke-width="1.5"/>
+        <g class="mg-bulbs">
+          <path d="M4 108h.01" stroke="#C8241B"/><path d="M9 98h.01" stroke="#F7B81F"/><path d="M14 88h.01" stroke="#1C4A9A"/><path d="M19 78h.01" stroke="#49B85C"/><path d="M24 68h.01" stroke="#F28A1C"/><path d="M29 58h.01" stroke="#C8241B"/><path d="M34 48h.01" stroke="#F7B81F"/><path d="M39 38h.01" stroke="#1C4A9A"/><path d="M44 28h.01" stroke="#49B85C"/>
+          <path d="M56 28h.01" stroke="#F28A1C"/><path d="M61 38h.01" stroke="#C8241B"/><path d="M66 48h.01" stroke="#F7B81F"/><path d="M71 58h.01" stroke="#1C4A9A"/><path d="M76 68h.01" stroke="#49B85C"/><path d="M81 78h.01" stroke="#F28A1C"/><path d="M86 88h.01" stroke="#C8241B"/><path d="M91 98h.01" stroke="#F7B81F"/><path d="M96 108h.01" stroke="#1C4A9A"/>
+        </g>
+      </svg>
       <div class="mg-wall">
-        <p class="mg-kicker mg-caps">Justin, Texas</p>
-        <h1 class="mg-sign">
-          <span class="mg-sign-name">Margarita's</span>
-          <span class="mg-sign-sub">Mexican Restaurant</span>
-        </h1>
-        <p class="mg-lead">Family owned and operated Mexican restaurant located in Justin, Texas.</p>
-
-        <div class="mg-facts">
-          <a class="mg-star" href="#reviews">
-            <span class="mg-star-wrap"><span class="mg-star-shape"><span class="mg-star-num">96%</span></span></span>
-            <span class="mg-star-cap">recommend, from 1,127 reviews on Facebook</span>
-          </a>
-          <p class="mg-open"><b>Open</b><span>11:00 AM – 9:00 PM</span></p>
-        </div>
-
-        <div class="mg-doors">
-          <a class="mg-door" href="tel:+19406488888">
-            <span class="mg-door-label">Call in an order</span>
-            <span class="mg-door-big">(940) 648-8888</span>
-          </a>
-          <a class="mg-door" href="https://cdn.flowpage.com/images/9b91cff0-7901-437b-ad7d-91c06b2a82f7-pdf?m=1741622659" target="_blank" rel="noopener">
-            <span class="mg-door-label">Main &amp; To Go</span>
-            <span class="mg-door-big">See the menu</span>
-          </a>
+        <div class="mg-wall-in">
+          <div class="mg-front">
+            <p class="mg-kicker mg-caps">Eat · Drink · Fiesta</p>
+            <h1 class="mg-sign">
+              <span class="mg-sign-name">Margarita's</span>
+              <span class="mg-sign-sub">Mexican Restaurant</span>
+            </h1>
+            <p class="mg-lead">Family owned and operated Mexican restaurant located in Justin, Texas.</p>
+            <div class="mg-doors">
+              <a class="mg-door" href="tel:+19406488888">
+                <span class="mg-door-label">Call in an order</span>
+                <span class="mg-door-big">940-648-8888</span>
+              </a>
+              <a class="mg-door" href="#menu">
+                <span class="mg-door-label">Favorites</span>
+                <span class="mg-door-big">See the menu</span>
+              </a>
+            </div>
+          </div>
+          <figure class="mg-window">
+            <img src="img/tacos-plate.webp" width="900" height="1323" alt="Two crispy tacos with rice and refried beans on a plate at Margarita's" fetchpriority="high">
+            <a class="mg-star" href="#reviews">
+              <span class="mg-star-wrap"><span class="mg-star-shape"><span class="mg-star-num">4.4</span></span></span>
+              <span class="mg-star-cap">1,725 Google reviews</span>
+            </a>
+            <p class="mg-open"><b>Open</b><span>11:00 AM – 9:00 PM</span></p>
+          </figure>
         </div>
       </div>
       <div class="mg-curb">
         <ul>
-          <li><strong>96%</strong> recommend</li>
-          <li><strong>1,127</strong> reviews</li>
-          <li><strong>7.6K</strong> followers</li>
-          <li>311 FM-156, Justin, TX</li>
+          <li><strong>4.4</strong> stars on Google</li>
+          <li><strong>96%</strong> recommend on Facebook</li>
+          <li>Dine in <strong>·</strong> Take out <strong>·</strong> Catering</li>
+          <li>311 S. FM 156, Justin, TX</li>
         </ul>
       </div>
     </section>
 
-    <section class="mg-boards" id="menu" aria-labelledby="mg-menu-h">
-      <p class="mg-eyebrow mg-caps">Menus &amp; ordering</p>
-      <h2 class="mg-h2" id="mg-menu-h">Need to call in an order? Or see our <em>catering menu?</em></h2>
+    <section class="mg-menu" id="menu" aria-labelledby="mg-menu-h">
+      <div class="mg-menu-in">
+        <div class="mg-menu-head">
+          <div>
+            <p class="mg-eyebrow mg-caps">From the menu</p>
+            <h2 class="mg-h2" id="mg-menu-h">Customer favorites</h2>
+          </div>
+          <p class="mg-legend">Dishes marked <span class="mg-fav">★ Customer favorite</span> carry the green star on our menu.</p>
+        </div>
 
-      <div class="mg-board-grid">
-        <a class="mg-board mg-b1" data-rise href="https://cdn.flowpage.com/images/9b91cff0-7901-437b-ad7d-91c06b2a82f7-pdf?m=1741622659" target="_blank" rel="noopener">
-          <span class="mg-board-n">Dine in &amp; to go</span>
-          <span>
-            <h3>Main Menu / To Go Menu</h3>
-            <p>The full menu, ready to read before you call or come in.</p>
-          </span>
-          <span class="mg-go">Open the menu <svg viewBox="0 0 34 16" aria-hidden="true"><path d="M0 8h30M23 1l8 7-8 7" fill="none" stroke="currentColor" stroke-width="3"/></svg></span>
-        </a>
+        <div class="mg-dishes">
+          <figure class="mg-dish mg-dish-a" data-rise>
+            <div class="mg-ph"><img src="img/tableside-guacamole.webp" width="800" height="1423" loading="lazy" alt="Guacamole being made table side in a stone molcajete"></div>
+            <figcaption>
+              <h3>Guacamole Azteca</h3>
+              <span class="mg-fav">★ Customer favorite</span>
+              <p>Table side guacamole made with perfectly ripe avocados mixed with lime juice, garlic salt, tomatoes, cilantro, jalapeños and onions.</p>
+            </figcaption>
+          </figure>
+          <figure class="mg-dish mg-dish-b" data-rise>
+            <div class="mg-ph"><img src="img/quesadillas.webp" width="1000" height="750" loading="lazy" alt="Grilled quesadillas with guacamole, sour cream and salsa"></div>
+            <figcaption>
+              <h3>Quesadillas</h3>
+              <p>A large flour tortilla stuffed with jack cheese, pico de gallo, and your choice of chicken fajita, beef fajita, brisket or shrimp. Served with guacamole and sour cream.</p>
+            </figcaption>
+          </figure>
+          <figure class="mg-dish mg-dish-c" data-rise>
+            <div class="mg-ph"><img src="img/margarita.webp" width="800" height="1063" loading="lazy" alt="Margarita on the rocks with a chili-salt rim and a lime wedge"></div>
+            <figcaption>
+              <h3>Top Shelf Margarita</h3>
+              <span class="mg-fav">★ Customer favorite</span>
+              <p>Made with 100% Jimador Gold, fresh lime and Herradura agave nectar. Topped with Grand Gala!</p>
+            </figcaption>
+          </figure>
+          <figure class="mg-dish mg-dish-d" data-rise>
+            <div class="mg-ph"><img src="img/fried-ice-cream.webp" width="800" height="1423" loading="lazy" alt="Fried ice cream with whipped cream, chocolate drizzle and a cherry"></div>
+            <figcaption>
+              <h3>Fried Ice Cream</h3>
+              <p>Vanilla ice cream battered and deep fried.</p>
+            </figcaption>
+          </figure>
+        </div>
 
-        <a class="mg-board mg-b2" id="catering" data-rise href="https://cdn.flowpage.com/images/7f514b9d-5155-48c9-bcfa-943e5b533752-pdf?m=1759119079" target="_blank" rel="noopener">
-          <span class="mg-board-n">For a crowd</span>
-          <span>
-            <h3>Catering Menu</h3>
-            <p>Feeding the office, the team or the whole family.</p>
-          </span>
-          <span class="mg-go">See catering <svg viewBox="0 0 34 16" aria-hidden="true"><path d="M0 8h30M23 1l8 7-8 7" fill="none" stroke="currentColor" stroke-width="3"/></svg></span>
-        </a>
+        <ul class="mg-more">
+          <li>
+            <h3>Fiesta Time Sampler</h3>
+            <span class="mg-fav">★ Customer favorite</span>
+            <p>Beef fajita and bean nachos, chicken quesadilla with pico de gallo, stuffed jalapeños, and chicken taquitos served with queso and guacamole.</p>
+          </li>
+          <li>
+            <h3>Hermanos Fajitas</h3>
+            <span class="mg-fav">★ Customer favorite</span>
+            <p>Your choice of beef or chicken served on a bed of caramelized onions and bell peppers, topped with sauteed mushrooms and jack cheese.</p>
+          </li>
+          <li>
+            <h3>Guadalajara Platillo</h3>
+            <span class="mg-fav">★ Customer favorite</span>
+            <p>Carnitas on a bed of grilled onions and bell peppers with tomatillo sauce, queso fresco and salsa picosa.</p>
+          </li>
+        </ul>
 
-        <a class="mg-board mg-b3" id="order" data-rise href="https://www.doordash.com/store/margarita%27s-mexican-restaurant-justin-30884162/" target="_blank" rel="noopener">
-          <span class="mg-board-n">Delivery</span>
-          <span>
-            <h3>DoorDash</h3>
-            <p>Margarita's, brought to your door.</p>
-          </span>
-          <span class="mg-go">Order delivery <svg viewBox="0 0 34 16" aria-hidden="true"><path d="M0 8h30M23 1l8 7-8 7" fill="none" stroke="currentColor" stroke-width="3"/></svg></span>
-        </a>
+        <div class="mg-btns">
+          <a class="mg-btn" href="https://cdn.flowpage.com/images/9b91cff0-7901-437b-ad7d-91c06b2a82f7-pdf?m=1741622659" target="_blank" rel="noopener">See the full menu</a>
+          <a class="mg-btn mg-btn-alt" href="tel:+19406488888">Call in an order</a>
+          <p class="mg-lunch">Lunch menu Monday – Friday, 11:00am – 4:00pm.</p>
+        </div>
+      </div>
+    </section>
 
-        <a class="mg-board mg-b4" data-rise href="https://stores.inksoft.com/margaritasmerchandise/shop/home" target="_blank" rel="noopener">
-          <span class="mg-board-n">Wear it</span>
-          <span>
-            <h3>Margarita's Merch</h3>
-          </span>
-          <span class="mg-go">Shop merch <svg viewBox="0 0 34 16" aria-hidden="true"><path d="M0 8h30M23 1l8 7-8 7" fill="none" stroke="currentColor" stroke-width="3"/></svg></span>
-        </a>
+    <section class="mg-inside" id="order" aria-labelledby="mg-in-h">
+      <div class="mg-inside-in">
+        <p class="mg-eyebrow mg-caps">Family owned and operated</p>
+        <h2 class="mg-h2" id="mg-in-h">Dine in. Take out. Catering.</h2>
+        <p class="mg-inside-lead">Need to call in an order? Or see our catering menu?</p>
+
+        <div class="mg-frames">
+          <figure class="mg-frame mg-frame-1" data-rise><img src="img/dining-room.webp" width="1200" height="675" loading="lazy" alt="Margarita's dining room with yellow walls, blue trim and framed art"></figure>
+          <figure class="mg-frame mg-frame-2" data-rise><img src="img/chips-salsa-margarita.webp" width="1000" height="750" loading="lazy" alt="Chips, salsa and a frozen margarita on a hand-painted tile table"></figure>
+          <figure class="mg-frame mg-frame-3" data-rise><img src="img/chicken-tacos.webp" width="1200" height="546" loading="lazy" alt="Three chicken tacos with rice, beans and avocado"></figure>
+        </div>
+
+        <div class="mg-board-grid">
+          <a class="mg-board mg-b1" data-rise href="https://cdn.flowpage.com/images/9b91cff0-7901-437b-ad7d-91c06b2a82f7-pdf?m=1741622659" target="_blank" rel="noopener">
+            <span class="mg-board-n">Dine in &amp; to go</span>
+            <span><h3>Main Menu / To Go Menu</h3></span>
+            <span class="mg-go">Open the menu <svg viewBox="0 0 34 16" aria-hidden="true"><path d="M0 8h30M23 1l8 7-8 7" fill="none" stroke="currentColor" stroke-width="3"/></svg></span>
+          </a>
+          <a class="mg-board mg-b2" id="catering" data-rise href="https://cdn.flowpage.com/images/7f514b9d-5155-48c9-bcfa-943e5b533752-pdf?m=1759119079" target="_blank" rel="noopener">
+            <span class="mg-board-n">For a crowd</span>
+            <span><h3>Catering Menu</h3></span>
+            <span class="mg-go">See catering <svg viewBox="0 0 34 16" aria-hidden="true"><path d="M0 8h30M23 1l8 7-8 7" fill="none" stroke="currentColor" stroke-width="3"/></svg></span>
+          </a>
+          <a class="mg-board mg-b3" data-rise href="https://www.doordash.com/store/margarita%27s-mexican-restaurant-justin-30884162/" target="_blank" rel="noopener">
+            <span class="mg-board-n">Delivery</span>
+            <span><h3>DoorDash</h3></span>
+            <span class="mg-go">Order delivery <svg viewBox="0 0 34 16" aria-hidden="true"><path d="M0 8h30M23 1l8 7-8 7" fill="none" stroke="currentColor" stroke-width="3"/></svg></span>
+          </a>
+          <a class="mg-board mg-b4" data-rise href="https://stores.inksoft.com/margaritasmerchandise/shop/home" target="_blank" rel="noopener">
+            <span class="mg-board-n">Wear it</span>
+            <span><h3>Margarita's Merch</h3></span>
+            <span class="mg-go">Shop merch <svg viewBox="0 0 34 16" aria-hidden="true"><path d="M0 8h30M23 1l8 7-8 7" fill="none" stroke="currentColor" stroke-width="3"/></svg></span>
+          </a>
+        </div>
       </div>
     </section>
 
     <section class="mg-word" id="reviews" aria-labelledby="mg-rev-h">
       <div class="mg-word-in">
-        <p class="mg-tally" data-rise><b>96%</b><span>recommend, from 1,127 reviews</span></p>
+        <div class="mg-tallies">
+          <p class="mg-tally" data-rise><b>4.4</b><span>stars from 1,725 Google reviews</span></p>
+          <p class="mg-tally" data-rise><b>96%</b><span>recommend, from 1,127 Facebook reviews</span></p>
+        </div>
         <div>
-          <h2 class="mg-eyebrow mg-caps" id="mg-rev-h" style="color:var(--ink)">Word on the wall</h2>
+          <h2 class="mg-eyebrow mg-caps" id="mg-rev-h">Word on the wall</h2>
           <blockquote>
             <p>Delish food! <span>Wonderful staff</span></p>
             <footer>April S., recommends Margarita's on <a href="https://facebook.com/MargaritasMexicanRestaurante" target="_blank" rel="noopener">Facebook</a></footer>
@@ -346,22 +478,23 @@ body{margin:0;background:#FFF6E3}
     <section class="mg-visit" id="visit" aria-labelledby="mg-visit-h">
       <div class="mg-visit-in">
         <div>
-          <p class="mg-eyebrow mg-caps">Find the blue building</p>
+          <p class="mg-eyebrow mg-caps">Look for the blue doors</p>
           <h2 class="mg-h2" id="mg-visit-h">Come see us in Justin.</h2>
-          <address class="mg-addr">311 FM-156<br>Justin, TX 76247</address>
+          <address class="mg-addr">311 S. FM 156<br>Justin, TX 76247</address>
+          <p class="mg-ways">Dine in · Take out · Catering</p>
           <div class="mg-btns">
             <a class="mg-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Margarita%27s+Mexican+Restaurant+311+FM-156+Justin+TX+76247" target="_blank" rel="noopener">Get directions</a>
-            <a class="mg-btn mg-btn-alt" href="tel:+19406488888">Call (940) 648-8888</a>
+            <a class="mg-btn mg-btn-alt" href="tel:+19406488888">Call 940-648-8888</a>
           </div>
         </div>
-        <div class="mg-hang">
-          <span class="mg-nail" aria-hidden="true"></span>
+        <figure class="mg-store">
+          <img src="img/storefront.webp" width="900" height="1200" loading="lazy" alt="Margarita's Mexican Restaurant storefront, a teal building with blue double doors">
           <div class="mg-hours">
             <h3>Open</h3>
             <p>11:00 AM – 9:00 PM</p>
-            <small>Calling in an order? <a href="tel:+19406488888">(940) 648-8888</a></small>
+            <small>Lunch menu Mon – Fri until 4:00pm</small>
           </div>
-        </div>
+        </figure>
       </div>
     </section>
   </main>
@@ -373,7 +506,7 @@ body{margin:0;background:#FFF6E3}
         <li><a href="https://facebook.com/MargaritasMexicanRestaurante" target="_blank" rel="noopener">Facebook</a></li>
         <li><a href="https://www.instagram.com/margaritasmexicanrestauran" target="_blank" rel="noopener">Instagram</a></li>
         <li><a href="https://www.tiktok.com/@margaritas.restaurant" target="_blank" rel="noopener">TikTok</a></li>
-        <li><a href="tel:+19406488888">(940) 648-8888</a></li>
+        <li><a href="tel:+19406488888">940-648-8888</a></li>
       </ul>
     </div>
     <p class="mg-note">Design preview for Margarita's Mexican Restaurant. This page is a sample of a full website and is not yet live.</p>
